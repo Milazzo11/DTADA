@@ -114,7 +114,7 @@ def build_DT_rec(node, max_depth: int) -> None:
         return
         # already perfectly categorized
     
-    cur_entropy = 1
+    cur_entropy = float("inf")
     
     for question in node.q_list:
         entropy, T_list, F_list = eval_question(node, question)
